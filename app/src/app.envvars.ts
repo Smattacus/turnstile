@@ -7,9 +7,7 @@ export enum AppVars {
 export function checkNeededEnvironmentVariables(): void {
   let missingEnvVars: string[] = [];
   for (let envVar in AppVars) {
-    console.log(process.env[envVar]);
     if (!process.env[envVar]) {
-      console.log('pushing');
       missingEnvVars.push(envVar);
     }
   }
